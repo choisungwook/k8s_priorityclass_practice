@@ -21,3 +21,6 @@ make up
 ```bash
 make down
 ```
+
+# 테스트 목차
+* [PriorityClass 스케쥴링 테스트](./manifests/example-1/)

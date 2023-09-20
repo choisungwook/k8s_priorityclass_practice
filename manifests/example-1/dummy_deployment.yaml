@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dummy-pod
+  namespace: default
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      run: dummy-pod
+  template:
+    metadata:
+      labels:
+        run: dummy-pod
+    spec:
+      priorityClassName: test
+      containers:
+      - name: busybox
+        image: busybox
+        resources:
+          requests:
+            cpu: 200m
+            memory: 200Mi
+          limits:
+            cpu: 200m
+            memory: 200Mi
+        args:
+        - sleep
+        - "1000000"

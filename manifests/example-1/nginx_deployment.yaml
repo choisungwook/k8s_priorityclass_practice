@@ -13,6 +13,7 @@ spec:
       labels:
         app: nginx
     spec:
+      priorityClassName: test
       containers:
       - name: nginx
         image: nginx

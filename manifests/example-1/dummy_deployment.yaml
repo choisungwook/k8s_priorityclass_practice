@@ -13,6 +13,7 @@ spec:
       labels:
         run: dummy-pod
     spec:
+      # priorityClassName: test
       containers:
       - name: busybox
         image: busybox
